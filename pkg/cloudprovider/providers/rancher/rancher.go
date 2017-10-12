@@ -840,7 +840,7 @@ func (r *CloudProvider) getHostByName(name string) (*Host, error) {
 			}
 		} else {
 			// rancher uses hostname
-			hostname = fqdnParts[0]
+			rancherHostname = rancherFQDNParts[0]
 		}
 		if strings.EqualFold(rancherHostname, hostname) {
 			hostsToReturn = append(hostsToReturn, host)
